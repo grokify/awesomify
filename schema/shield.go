@@ -22,7 +22,6 @@ type Shield struct {
 	LinkURL   string
 }
 
-// [![](https://pkg.go.dev/badge/github.com/maxence-charriere/go-app)](https://pkg.go.dev/github.com/maxence-charriere/go-app/pkg/app)
 func (s *Shield) Markdown() (string, error) {
 	imageURL := strings.TrimSpace(s.ImageURL)
 	linkURL := strings.TrimSpace(s.LinkURL)
