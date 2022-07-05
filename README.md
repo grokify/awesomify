@@ -5,7 +5,7 @@
 [![Docs][docs-godoc-svg]][docs-godoc-url]
 [![License][license-svg]][license-url]
 
-Awesomeify is a tool and library to build [Awesome lists](https://github.com/sindresorhus/awesome).
+Awesomify is a tool and library to build [Awesome lists](https://github.com/sindresorhus/awesome).
 
  [build-status-svg]: https://github.com/grokify/awesomify/workflows/test/badge.svg?branch=main
  [build-status-url]: https://github.com/grokify/awesomify/actions/workflows/go_build.yaml
