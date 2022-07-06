@@ -18,6 +18,17 @@ type Entry struct {
 	AccessDate   string   // RFC-3339 `full-date`
 	CategoryPath []string // tab delimited
 	Badges       []Badge
+	GitHubStars  uint
+}
+
+func (e *Entry) Category() Category {
+	cat := Category{
+		Path: e.CategoryPath,
+	}
+	if len(cat.Path) > 0 {
+		cat.Name = cat.Path[len(cat.Path)-1]
+		cat.ParentNames = cat.Path[:len(cat.Path)-1]
+	}
 }
 
 func (e *Entry) Markdown() (string, error) {

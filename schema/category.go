@@ -2,14 +2,14 @@ package schema
 
 import (
 	"errors"
-	"strings"
 )
 
 type Categories []Category
 
 type Category struct {
-	Path             string
+	Path             []string
 	Name             string
+	Description      string
 	ParentNames      []string
 	SubCategoryNames []string
 }
@@ -24,6 +24,7 @@ func (c *Category) Inflate(force bool) error {
 		return errors.New("category name is not set")
 	}
 	catPath = append(catPath, c.Name)
-	c.Path = strings.Join(catPath, "\t")
+	c.Path = catPath
+	//c.Path = strings.Join(catPath, "\t")
 	return nil
 }
