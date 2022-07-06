@@ -10,6 +10,7 @@ import (
 
 const (
 	BadgeNameAPIDocs     = "API Docs"
+	BadgeNameGoReference = "Go Reference"
 	BadgeNameLicense     = "License"
 	BadgeNameBuildStatus = "Build Status"
 )
