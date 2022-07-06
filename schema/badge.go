@@ -9,23 +9,23 @@ import (
 )
 
 const (
-	SchemaNameAPIDocs     = "API Docs"
-	ShieldNameLicense     = "License"
-	ShieldNameBuildStatus = "Build Status"
+	BadgeNameAPIDocs     = "API Docs"
+	BadgeNameLicense     = "License"
+	BadgeNameBuildStatus = "Build Status"
 )
 
-type Shields []Shield
+type Badges []Badge
 
-type Shield struct {
+type Badge struct {
 	ImageName string
 	ImageURL  string
 	LinkURL   string
 }
 
-func (s *Shield) Markdown() (string, error) {
-	imageURL := strings.TrimSpace(s.ImageURL)
-	linkURL := strings.TrimSpace(s.LinkURL)
-	imgMD, err := ImageMarkdown(imageURL, s.ImageName)
+func (b *Badge) Markdown() (string, error) {
+	imageURL := strings.TrimSpace(b.ImageURL)
+	linkURL := strings.TrimSpace(b.LinkURL)
+	imgMD, err := ImageMarkdown(imageURL, b.ImageName)
 	if err != nil {
 		return "", err
 	}

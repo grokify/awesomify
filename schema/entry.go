@@ -17,7 +17,7 @@ type Entry struct {
 	Description  string
 	AccessDate   string   // RFC-3339 `full-date`
 	CategoryPath []string // tab delimited
-	Shields      []Shield
+	Badges       []Badge
 }
 
 func (e *Entry) Markdown() (string, error) {
@@ -26,12 +26,12 @@ func (e *Entry) Markdown() (string, error) {
 		return "", ErrEntryNameMissing
 	}
 	nameParts = append(nameParts, markdown.Linkify(e.URL, e.Name))
-	for _, shield := range e.Shields {
-		shieldMD, err := shield.Markdown()
+	for _, badge := range e.Badges {
+		badgeMD, err := badge.Markdown()
 		if err != nil {
 			return "", err
 		}
-		nameParts = append(nameParts, shieldMD)
+		nameParts = append(nameParts, badgeMD)
 	}
 	nameString := strings.Join(nameParts, " ")
 	e.Description = strings.TrimSpace(e.Description)

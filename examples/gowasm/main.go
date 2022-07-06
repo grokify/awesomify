@@ -32,14 +32,14 @@ func EntriesGoRuntimes() schema.Entries {
 			Name:        "wasmer-go",
 			URL:         "https://github.com/wasmerio/wasmer-go",
 			Description: "Go WebAssembly run time for [Wasmer](https://github.com/wasmerio/wasmer) (Rust)",
-			Shields: schema.Shields{
+			Badges: schema.Badges{
 				{
-					ImageName: schema.SchemaNameAPIDocs,
+					ImageName: schema.BadgeNameAPIDocs,
 					LinkURL:   "https://pkg.go.dev/github.com/wasmerio/wasmer-go/wasmer",
 					ImageURL:  "https://pkg.go.dev/badge/github.com/wasmerio/wasmer-go/wasmer",
 				},
 				{
-					ImageName: schema.ShieldNameBuildStatus,
+					ImageName: schema.BadgeNameBuildStatus,
 					ImageURL:  `https://github.com/wasmerio/wasmer-go/workflows/Build%20and%20Test/badge.svg`,
 					LinkURL:   "https://github.com/wasmerio/wasmer-go/actions?query=workflow%3A%22Build+and+Test%22",
 				},
@@ -49,14 +49,14 @@ func EntriesGoRuntimes() schema.Entries {
 			Name:        "wasmtime-go",
 			URL:         "https://github.com/bytecodealliance/wasmtime-go",
 			Description: "Go WebAssembly run time for [Wastime](https://github.com/bytecodealliance/wasmtime) (Rust)",
-			Shields: schema.Shields{
+			Badges: schema.Badges{
 				{
-					ImageName: schema.SchemaNameAPIDocs,
+					ImageName: schema.BadgeNameAPIDocs,
 					LinkURL:   "https://pkg.go.dev/github.com/bytecodealliance/wasmtime-go",
 					ImageURL:  "https://pkg.go.dev/badge/github.com/bytecodealliance/wasmtime-go",
 				},
 				{
-					ImageName: schema.ShieldNameBuildStatus,
+					ImageName: schema.BadgeNameBuildStatus,
 					LinkURL:   "https://github.com/bytecodealliance/wasmtime-go/actions?query=workflow%3ACI",
 					ImageURL:  "https://github.com/bytecodealliance/wasmtime-go/workflows/CI/badge.svg",
 				},
@@ -66,9 +66,9 @@ func EntriesGoRuntimes() schema.Entries {
 			Name:        "wazero",
 			URL:         "https://github.com/tetratelabs/wazero",
 			Description: "Zero dependency Go WebAssembly runtime (no CGO)",
-			Shields: schema.Shields{
+			Badges: schema.Badges{
 				{
-					ImageName: schema.SchemaNameAPIDocs,
+					ImageName: schema.BadgeNameAPIDocs,
 					LinkURL:   "https://pkg.go.dev/github.com/tetratelabs/wazero",
 					ImageURL:  "https://pkg.go.dev/badge//github.com/tetratelabs/wazero",
 				},
