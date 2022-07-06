@@ -1,4 +1,4 @@
-module github.com/grokify/awesomify
+module github.com/grokify/awesomely
 
 go 1.18
 

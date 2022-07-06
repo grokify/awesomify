@@ -5,7 +5,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/grokify/awesomify/schema"
+	"github.com/grokify/awesomely/schema"
 )
 
 func main() {
