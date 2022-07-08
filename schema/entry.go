@@ -11,16 +11,26 @@ var ErrEntryNameMissing = errors.New("entry name is required, but not present, f
 
 type Entries []Entry
 
-type Entry struct {
-	URL          string
-	Name         string
-	Description  string
-	AccessDate   string   // RFC-3339 `full-date`
-	CategoryPath []string // tab delimited
-	Badges       []Badge
-	GitHubStars  uint
+func (e Entries) CategoriesMap() map[string]Category {
+	cats := map[string]Category{}
+	for _, entry := range e {
+		catPath := entry.Category.FullQualifedPath()
+		cats[catPath] = entry.Category
+	}
+	return cats
 }
 
+type Entry struct {
+	URL         string
+	Name        string
+	Description string
+	AccessDate  string   // RFC-3339 `full-date`
+	Category    Category // tab delimited
+	Badges      []Badge
+	GitHubStars uint
+}
+
+/*
 func (e *Entry) Category() Category {
 	cat := Category{
 		Path: e.CategoryPath,
@@ -30,6 +40,7 @@ func (e *Entry) Category() Category {
 		cat.ParentNames = cat.Path[:len(cat.Path)-1]
 	}
 }
+*/
 
 func (e *Entry) Markdown() (string, error) {
 	nameParts := []string{}

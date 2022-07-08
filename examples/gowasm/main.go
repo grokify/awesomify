@@ -3,22 +3,17 @@ package main
 import (
 	"fmt"
 	"log"
-	"strings"
 
 	"github.com/grokify/awesomely/schema"
 )
 
 func main() {
-	lines := []string{}
-	entries := EntriesGoRuntimes()
-	for _, entry := range entries {
-		md, err := entry.Markdown()
-		if err != nil {
-			log.Fatal(err)
-		}
-		lines = append(lines, "- "+md)
+	awe := AwesomeGoWasm()
+	md, err := awe.Markdown()
+	if err != nil {
+		log.Fatal(err)
 	}
-	fmt.Println(strings.Join(lines, "\n"))
+	fmt.Println(md)
 }
 
 const (
@@ -26,13 +21,27 @@ const (
 	CategoryRuntimes  = "Runtimes"
 )
 
+func AwesomeGoWasm() schema.Awesome {
+	return schema.Awesome{
+		Categories: schema.Categories{
+			{
+				Path: []string{CategoryLibraries},
+			},
+			{
+				Path: []string{CategoryRuntimes},
+			},
+		},
+		Entries: EntriesGoRuntimes(),
+	}
+}
+
 func EntriesGoRuntimes() schema.Entries {
 	entries := schema.Entries{
 		{
-			CategoryPath: []string{CategoryLibraries},
-			Name:         "Wat2Wasm",
-			URL:          "https://github.com/bytecodealliance/wasmtime-go/blob/main/wat2wasm.go",
-			Description:  "Wat2Wasm converts the text format of WebAssembly to the binary format.",
+			Category:    schema.Category{Path: []string{CategoryLibraries}},
+			Name:        "Wat2Wasm",
+			URL:         "https://github.com/bytecodealliance/wasmtime-go/blob/main/wat2wasm.go",
+			Description: "Wat2Wasm converts the text format of WebAssembly to the binary format.",
 			Badges: schema.Badges{
 				{
 					ImageName: schema.BadgeNameAPIDocs,
@@ -47,10 +56,10 @@ func EntriesGoRuntimes() schema.Entries {
 			},
 		},
 		{
-			CategoryPath: []string{CategoryLibraries},
-			Name:         "vugu",
-			URL:          "https://github.com/vugu/vugu",
-			Description:  "Vugu is an experimental library for web UIs written in Go and targeting webassembly.",
+			Category:    schema.Category{Path: []string{CategoryLibraries}},
+			Name:        "vugu",
+			URL:         "https://github.com/vugu/vugu",
+			Description: "Vugu is an experimental library for web UIs written in Go and targeting webassembly.",
 			Badges: schema.Badges{
 				{
 					ImageName: schema.BadgeNameAPIDocs,
@@ -65,10 +74,10 @@ func EntriesGoRuntimes() schema.Entries {
 			},
 		},
 		{
-			CategoryPath: []string{CategoryRuntimes},
-			Name:         "WasmEdge-go",
-			URL:          "https://github.com/second-state/WasmEdge-go",
-			Description:  "Go WebAssembly run time for [WasmEdge](https://github.com/WasmEdge/WasmEdge) (C++)",
+			Category:    schema.Category{Path: []string{CategoryRuntimes}},
+			Name:        "WasmEdge-go",
+			URL:         "https://github.com/second-state/WasmEdge-go",
+			Description: "Go WebAssembly run time for [WasmEdge](https://github.com/WasmEdge/WasmEdge) (C++)",
 
 			Badges: schema.Badges{
 				{
@@ -84,10 +93,10 @@ func EntriesGoRuntimes() schema.Entries {
 			},
 		},
 		{
-			CategoryPath: []string{CategoryRuntimes},
-			Name:         "wasmer-go",
-			URL:          "https://github.com/wasmerio/wasmer-go",
-			Description:  "Go WebAssembly run time for [Wasmer](https://github.com/wasmerio/wasmer) (Rust)",
+			Category:    schema.Category{Path: []string{CategoryRuntimes}},
+			Name:        "wasmer-go",
+			URL:         "https://github.com/wasmerio/wasmer-go",
+			Description: "Go WebAssembly run time for [Wasmer](https://github.com/wasmerio/wasmer) (Rust)",
 			Badges: schema.Badges{
 				{
 					ImageName: schema.BadgeNameAPIDocs,
@@ -102,10 +111,10 @@ func EntriesGoRuntimes() schema.Entries {
 			},
 		},
 		{
-			CategoryPath: []string{CategoryRuntimes},
-			Name:         "wasmtime-go",
-			URL:          "https://github.com/bytecodealliance/wasmtime-go",
-			Description:  "Go WebAssembly run time for [Wastime](https://github.com/bytecodealliance/wasmtime) (Rust)",
+			Category:    schema.Category{Path: []string{CategoryRuntimes}},
+			Name:        "wasmtime-go",
+			URL:         "https://github.com/bytecodealliance/wasmtime-go",
+			Description: "Go WebAssembly run time for [Wastime](https://github.com/bytecodealliance/wasmtime) (Rust)",
 			Badges: schema.Badges{
 				{
 					ImageName: schema.BadgeNameAPIDocs,
@@ -120,10 +129,10 @@ func EntriesGoRuntimes() schema.Entries {
 			},
 		},
 		{
-			CategoryPath: []string{CategoryRuntimes},
-			Name:         "wazero",
-			URL:          "https://github.com/tetratelabs/wazero",
-			Description:  "Zero dependency Go WebAssembly runtime (no CGO)",
+			Category:    schema.Category{Path: []string{CategoryRuntimes}},
+			Name:        "wazero",
+			URL:         "https://github.com/tetratelabs/wazero",
+			Description: "Zero dependency Go WebAssembly runtime (no CGO)",
 			Badges: schema.Badges{
 				{
 					ImageName: schema.BadgeNameAPIDocs,
