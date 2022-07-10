@@ -8,8 +8,9 @@ import (
 )
 
 type Awesome struct {
-	Categories Categories
-	Entries    Entries
+	BulletOrdered bool
+	Categories    Categories
+	Entries       Entries
 }
 
 func (a *Awesome) Validate() (catNoEntry []string, entryCatMissing []string, entryNoCatCount uint, err error) {
@@ -60,6 +61,10 @@ func (a *Awesome) MarkdownForCategory(catPath string) (string, error) {
 		header += "#"
 	}
 	header += " " + catPathParts[len(catPathParts)-1]
+	bullet := "-"
+	if a.BulletOrdered {
+		bullet = "1."
+	}
 	lines := []string{header}
 	entriesByCat := a.EntriesByCategory(Categories{{Path: catPathParts}})
 	for _, entry := range entriesByCat {
@@ -67,7 +72,7 @@ func (a *Awesome) MarkdownForCategory(catPath string) (string, error) {
 		if err != nil {
 			return "", err
 		}
-		lines = append(lines, "- "+md)
+		lines = append(lines, bullet+" "+md)
 	}
 	return strings.Join(lines, "\n") + "\n", nil
 	//	header := len(catPathParts) + 1

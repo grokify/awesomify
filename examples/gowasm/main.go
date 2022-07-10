@@ -25,6 +25,7 @@ const (
 
 func AwesomeGoWasm() schema.Awesome {
 	return schema.Awesome{
+		BulletOrdered: true,
 		Categories: schema.Categories{
 			{
 				Path: []string{CategoryGoGuestExamples},
