@@ -17,13 +17,21 @@ func main() {
 }
 
 const (
-	CategoryLibraries = "Libraries"
-	CategoryRuntimes  = "Runtimes"
+	CategoryGoGuestExamples     = "Go Guest Examples"
+	CategoryTinyGoGuestExamples = "TinyGo Guest Examples"
+	CategoryLibraries           = "Libraries"
+	CategoryRuntimes            = "Runtimes"
 )
 
 func AwesomeGoWasm() schema.Awesome {
 	return schema.Awesome{
 		Categories: schema.Categories{
+			{
+				Path: []string{CategoryGoGuestExamples},
+			},
+			{
+				Path: []string{CategoryTinyGoGuestExamples},
+			},
 			{
 				Path: []string{CategoryLibraries},
 			},
@@ -37,6 +45,19 @@ func AwesomeGoWasm() schema.Awesome {
 
 func EntriesGoRuntimes() schema.Entries {
 	entries := schema.Entries{
+		{
+			Category:    schema.Category{Path: []string{CategoryGoGuestExamples}},
+			Name:        "go-wasm-examples",
+			URL:         "https://github.com/danieljoos/go-wasm-examples",
+			Description: "Some small examples of using Go and WebAssembly.",
+		},
+		{
+			Category:    schema.Category{Path: []string{CategoryGoGuestExamples}},
+			Name:        "Go WebAssembly Tutorial - Building a Calculator Tutorial",
+			URL:         "https://tutorialedge.net/golang/go-webassembly-tutorial",
+			Description: `build "building a really simple calculator to give us an idea as to how we can write functions that can be exposed to the frontend, evaluate DOM elements and subsequently update any DOM elements with the results from any functions we call."`,
+		},
+
 		{
 			Category:    schema.Category{Path: []string{CategoryLibraries}},
 			Name:        "Wat2Wasm",
@@ -70,6 +91,19 @@ func EntriesGoRuntimes() schema.Entries {
 					ImageName: schema.BadgeNameBuildStatus,
 					LinkURL:   "https://travis-ci.org/github/vugu/vugu",
 					ImageURL:  "https://api.travis-ci.org/vugu/vugu.svg?branch=master",
+				},
+			},
+		},
+		{
+			Category:    schema.Category{Path: []string{CategoryLibraries}},
+			Name:        "wasm-fetch",
+			URL:         "https: //github.com/marwan-at-work/wasm-fetch",
+			Description: "A go-wasm library that wraps the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). This is useful since TinyGo does not support `net/http`.",
+			Badges: schema.Badges{
+				{
+					ImageName: schema.BadgeNameAPIDocs,
+					LinkURL:   "https://pkg.go.dev/github.com/marwan-at-work/wasm-fetch",
+					ImageURL:  "https://pkg.go.dev/badge/github.com/marwan-at-work/wasm-fetch",
 				},
 			},
 		},

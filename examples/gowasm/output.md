@@ -1,8 +1,13 @@
 # Awesome Go and WebAssembly
 
+## Go Guest Examples
+- [go-wasm-examples](https://github.com/danieljoos/go-wasm-examples) — Some small examples of using Go and WebAssembly.
+- [Go WebAssembly Tutorial - Building a Calculator Tutorial](https://tutorialedge.net/golang/go-webassembly-tutorial) — build "building a really simple calculator to give us an idea as to how we can write functions that can be exposed to the frontend, evaluate DOM elements and subsequently update any DOM elements with the results from any functions we call."
+## TinyGo Guest Examples
 ## Libraries
 - [Wat2Wasm](https://github.com/bytecodealliance/wasmtime-go/blob/main/wat2wasm.go) [![API Docs](https://pkg.go.dev/badge/github.com/bytecodealliance/wasmtime-go)](https://pkg.go.dev/github.com/bytecodealliance/wasmtime-go#Wat2Wasm) [![Build Status](https://github.com/bytecodealliance/wasmtime-go/workflows/CI/badge.svg)](https://github.com/bytecodealliance/wasmtime-go/actions?query=workflow%3ACI) — Wat2Wasm converts the text format of WebAssembly to the binary format.
 - [vugu](https://github.com/vugu/vugu) [![API Docs](https://pkg.go.dev/badge/github.com/vugu/vugu)](https://pkg.go.dev/github.com/vugu/vugu) [![Build Status](https://api.travis-ci.org/vugu/vugu.svg?branch=master)](https://travis-ci.org/github/vugu/vugu) — Vugu is an experimental library for web UIs written in Go and targeting webassembly.
+- [wasm-fetch](https: //github.com/marwan-at-work/wasm-fetch) [![API Docs](https://pkg.go.dev/badge/github.com/marwan-at-work/wasm-fetch)](https://pkg.go.dev/github.com/marwan-at-work/wasm-fetch) — A go-wasm library that wraps the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). This is useful since TinyGo does not support `net/http`.
 ## Runtimes
 - [WasmEdge-go](https://github.com/second-state/WasmEdge-go) [![API Docs](https://pkg.go.dev/badge/second-state/WasmEdge-go)](https://pkg.go.dev/github.com/second-state/WasmEdge-go) [![Build Status](https://github.com/wasmerio/wasmer-go/workflows/Build%20and%20Test/badge.svg)](https://github.com/wasmerio/wasmer-go/actions?query=workflow%3A%22Build+and+Test%22) — Go WebAssembly run time for [WasmEdge](https://github.com/WasmEdge/WasmEdge) (C++)
 - [wasmer-go](https://github.com/wasmerio/wasmer-go) [![API Docs](https://pkg.go.dev/badge/github.com/wasmerio/wasmer-go/wasmer)](https://pkg.go.dev/github.com/wasmerio/wasmer-go/wasmer) [![Build Status](https://github.com/wasmerio/wasmer-go/workflows/Build%20and%20Test/badge.svg)](https://github.com/wasmerio/wasmer-go/actions?query=workflow%3A%22Build+and+Test%22) — Go WebAssembly run time for [Wasmer](https://github.com/wasmerio/wasmer) (Rust)
