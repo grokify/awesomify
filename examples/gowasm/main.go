@@ -97,7 +97,7 @@ func EntriesGoRuntimes() schema.Entries {
 		{
 			Category:    schema.Category{Path: []string{CategoryLibraries}},
 			Name:        "wasm-fetch",
-			URL:         "https: //github.com/marwan-at-work/wasm-fetch",
+			URL:         "https://github.com/marwan-at-work/wasm-fetch",
 			Description: "A go-wasm library that wraps the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). This is useful since TinyGo does not support `net/http`.",
 			Badges: schema.Badges{
 				{
