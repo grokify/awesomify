@@ -149,7 +149,7 @@ func EntriesGoRuntimes() schema.Entries {
 			Category:    schema.Category{Path: []string{CategoryRuntimes}},
 			Name:        "wasmtime-go",
 			URL:         "https://github.com/bytecodealliance/wasmtime-go",
-			Description: "Go WebAssembly run time for [Wastime](https://github.com/bytecodealliance/wasmtime) (Rust)",
+			Description: "Go WebAssembly run time for [Wastime](https://github.com/bytecodealliance/wasmtime) (Rust). [Wasmtime Guide](https://docs.wasmtime.dev/lang-go.html).",
 			Badges: schema.Badges{
 				{
 					ImageName: schema.BadgeNameAPIDocs,
