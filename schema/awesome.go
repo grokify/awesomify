@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/grokify/mogo/type/stringsutil"
+	"github.com/grokify/mogo/type/slicesutil"
 )
 
 type Awesome struct {
@@ -31,7 +31,7 @@ func (a *Awesome) Validate() (catNoEntry []string, entryCatMissing []string, ent
 			catNoEntry = append(catNoEntry, catPath)
 		}
 	}
-	entryCatMissing = stringsutil.Dedupe(entryCatMissing)
+	entryCatMissing = slicesutil.Dedupe(entryCatMissing)
 	if len(catNoEntry) > 0 || len(entryCatMissing) > 0 || entryNoCatCount > 0 {
 		err = errors.New("category validation failure")
 	}
