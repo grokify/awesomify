@@ -1,4 +1,4 @@
-github.com/grokify/mogo v0.64.2 h1:JkqX9tX/81cayg3aaWsLs9kE8YRvjlcafrAYuJob/dM=
-github.com/grokify/mogo v0.64.2/go.mod h1:T+vx1FB9ApDJH0T063XotVMHDsFoidt73umCrQdSW4A=
-golang.org/x/exp v0.0.0-20240531132922-fd00a4e0eefc h1:O9NuF4s+E/PvMIy+9IUZB9znFwUIXEWSstNjek6VpVg=
-golang.org/x/exp v0.0.0-20240531132922-fd00a4e0eefc/go.mod h1:XtvwrStGgqGPLc4cjQfWqZHG1YFdYs6swckp8vpsjnc=
+github.com/grokify/mogo v0.64.8 h1:Oi7X6EWIaBVPLirrP8DAAMcTgQzUHBqag36yjBzMwTU=
+github.com/grokify/mogo v0.64.8/go.mod h1:qD4Zz/GTGquZ7prO4A7h3kT7ZntMshXLk1lXdviKkUI=
+golang.org/x/exp v0.0.0-20240808152545-0cdaa3abc0fa h1:ELnwvuAXPNtPk1TJRuGkI9fDTwym6AYBu0qzT8AcHdI=
+golang.org/x/exp v0.0.0-20240808152545-0cdaa3abc0fa/go.mod h1:akd2r19cwCdwSwWeIdzYQGa/EZZyqcOdwWiwj5L5eKQ=
