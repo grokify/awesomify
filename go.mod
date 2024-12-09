@@ -4,6 +4,10 @@ go 1.22.0
 
 toolchain go1.22.3
 
-require github.com/grokify/mogo v0.64.11
+require github.com/grokify/mogo v0.66.1
 
-require golang.org/x/exp v0.0.0-20240904232852-e7e105dedf7e // indirect
+require (
+	github.com/huandu/xstrings v1.5.0 // indirect
+	golang.org/x/exp v0.0.0-20241204233417-43b7b7cde48d // indirect
+	golang.org/x/text v0.21.0 // indirect
+)
